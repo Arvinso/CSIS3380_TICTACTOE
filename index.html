@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Minions for Winions</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+		
+	</script>	
+
+	<style type="text/css">
+	
+	h1
+	{
+		margin-top: 0px;
+		margin-left:auto; 
+    	margin-right:auto;
+	}	
+	
+	#initplayers
+	{
+		margin-left:auto; 
+    	margin-right:auto;
+    	text-align: center;		
+	}
+	
+	#help
+	{
+		margin-left:auto; 
+    	margin-right:auto;
+    	text-align: center;				
+	}
+	
+	#turn 
+	{
+		margin-left:auto; 
+    	margin-right:auto;		
+		text-align: center;
+	}
+	
+	#leftheader 
+	{
+		float:left; 
+		width:50%;
+			
+	}
+	#rightheader 
+	{
+		float:right; 
+		width:50%;		
+	}	
+	.headers
+	{
+		
+		text-align: center;
+	}
+	
+	#playerblueoptions
+	{
+		float:left;
+		width:50%;
+		background-color: #3399FF;
+		text-align: center;
+	}	
+	#playerredoptions
+	{
+		float:right;
+		width:50%;
+		background-color: #CC0000;		
+		text-align: center;	
+		
+	}
+	
+	.buttons
+	{
+		font-size:30px;	
+	}
+		
+	#board 
+	{		
+		margin-left:auto; 
+    	margin-right:auto;
+		border-collapse: collapse;		
+	}
+	.boardcell
+	{
+		padding: 0px;		
+    	border: 0px;
+		border-collapse: collapse;
+	}	
+	p
+	{
+		font-size:30px;
+	}	
+		
+	body 
+	{
+		background-image: url("img/backgroundopa16.jpg");
+					  	    
+	}
+		
+</style>
+
+</head>
+
+
+<script src="fours.js"></script>
+<body onload="loadscores()">
+
+<table id="board">
+
+		<tr>
+			<td class="boardcell" onclick="dropit(0)"><img id="05"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(1)"><img id="15"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(2)"><img id="25"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(3)"><img id="35"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(4)"><img id="45"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(5)"><img id="55"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(6)"><img id="65"src="img/cell.jpeg" height="80" width="80"></td>
+		</tr>
+		<tr>
+			<td class="boardcell" onclick="dropit(0)"><img id="04"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(1)"><img id="14"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(2)"><img id="24"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(3)"><img id="34"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(4)"><img id="44"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(5)"><img id="54"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(6)"><img id="64"src="img/cell.jpeg" height="80" width="80"></td>
+		</tr>	
+		<tr>
+			<td class="boardcell" onclick="dropit(0)"><img id="03"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(1)"><img id="13"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(2)"><img id="23"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(3)"><img id="33"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(4)"><img id="43"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(5)"><img id="53"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(6)"><img id="63"src="img/cell.jpeg" height="80" width="80"></td>
+		</tr>
+		<tr>
+			<td class="boardcell" onclick="dropit(0)"><img id="02"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(1)"><img id="12"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(2)"><img id="22"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(3)"><img id="32"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(4)"><img id="42"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(5)"><img id="52"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(6)"><img id="62"src="img/cell.jpeg" height="80" width="80"></td>
+			
+		</tr>
+		<tr>
+			<td class="boardcell" onclick="dropit(0)"><img id="01"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(1)"><img id="11"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(2)"><img id="21"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(3)"><img id="31"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(4)"><img id="41"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(5)"><img id="51"src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(6)"><img id="61"src="img/cell.jpeg" height="80" width="80"></td>		
+		</tr>
+		<tr>
+			<td class="boardcell" onclick="dropit(0)"><img id="00" src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(1)"><img id="10" src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(2)"><img id="20" src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(3)"><img id="30" src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(4)"><img id="40" src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(5)"><img id="50" src="img/cell.jpeg" height="80" width="80"></td>
+			<td class="boardcell" onclick="dropit(6)"><img id="60" src="img/cell.jpeg" height="80" width="80"></td>
+		</tr>		
+		
+</table>
+
+<hr />
+<div>
+	<div id="leftheader">
+		<h1 class="headers"><div id="blueheader">Blue Minion</div></h1>
+	</div>
+	<div id="rightheader">
+		<h1 class="headers"><div id="redheader">Red Minion</div></h1>
+	</div>
+	
+</div>
+
+<div id="playeroptions">
+	<div id="playerblueoptions" align="left">		
+			
+		<button id="blueundo" onclick="undo()"><div class="buttons">undo</div></button>
+		<button id="blueclear" onclick="clearselect(1)"><div class="buttons">shoot</div></button>
+		<button id="bluebomb" onclick="bombselect(1)"><div class="buttons">bomb</div></button>
+	</div>
+	
+	<div id="playerredoptions" align="right">	
+			
+		<button id="redundo" onclick="undo()"><div class="buttons">undo</div></button>
+		<button id="redclear" onclick="clearselect(0)"><div class="buttons">shoot</div></button>
+		<button id="redbomb" onclick="bombselect(0)"><div class="buttons">bomb</div></button>
+	</div>
+</div>
+<div id="initplayers">
+		
+		<label>blue player name: <input type="text" id="bluename"></label>
+		<label>red player name: <input type="text" id="redname"></label>
+		
+		<p>choose first player</p>		
+		<select name="player" >
+		<option value="1" selected>blue</option>
+		<option value="0" >red</option>
+		</select>
+</div>
+
+<div id="turn">
+	<p>Active special move: </p>
+	<img id="specialmove" src="img/idle.jpg"height="200" width="200">
+</div>
+
+<p id="help">
+	<a href="instruction.html" target="_blank">
+	<img border="0" alt="help" src="img/help.jpg" width="256" height="144">
+	</a>
+</p>
+<div id="mesg">.</div>
+
+<table border="1" cellpadding="10">
+	<thead>
+		<tr>
+			<th>Player#</th>
+			<th>PlayerName</th>
+			<th>Moves</th>
+		</tr>
+	</thead>
+	<tbody id="result">
+		
+		
+	</tbody>
+</table>
+
+<audio id="looping">
+  <source src="assets/minion.mp3" type="audio/mpeg"> 
+</audio>
+  
+ <audio id="bombaudio">
+ <source src="assets/bomb.mp3" type="audio/mpeg">
+ </audio>
+ 
+ <audio id="laseraudio">
+ <source src="assets/laser.mp3" type="audio/mpeg">
+ </audio>
+</body>
+
+</html>
